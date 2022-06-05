@@ -39,8 +39,9 @@ public class TextInImage {
             Scanner sc = new Scanner(System.in);
             System.out.println("Enter the text you would like to encode (max length 16383 characters): ");
             String text = "";
-            while(sc.hasNextLine()){
-                text += sc.nextLine();
+            String tmp;
+            while(sc.hasNextLine() && !(tmp = sc.nextLine()).equals("")){
+                text += tmp;
             }
 
             // convert text.length() and text to binary 7 bit US-ASCII representation
